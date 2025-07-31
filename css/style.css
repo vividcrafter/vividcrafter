@@ -194,15 +194,18 @@ body{
     margin-bottom: 45px;
 }
 #myBtnContainer button{
-  border: none;
-  color: black;
-  background: transparent;
-  font-size: 20px;
-  font-weight: 600;
-  cursor: pointer;   
-  display: inline-block;
-  margin: 0 25px;
+    color: black;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    margin: 6px 15px;
+    border: 2px solid #897b1f;
+    border-radius: 5px;
+    padding: 4px 16px;
 }
+
 #myBtnContainer button:hover{
     color: #fca61f;
 }
