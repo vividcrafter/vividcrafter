@@ -84,21 +84,44 @@ let progressreact = setInterval(() => {
 
 
 // filter using javascript
+// $(document).ready(function () {
+//   $(".filter-item").click(function () {
+//     const value = $(this).attr("data-filter");
+//     if (value == "all") {
+//       $(".post").show("1000");
+//     } else {
+//       $(".post")
+//         .not("." + value)
+//         .hide("1000");
+//       $(".post")
+//         .filter("." + value)
+//         .show("1000");
+//     }
+//   });
+// });
+
+
+
 $(document).ready(function () {
+  // Show only .logo posts by default
+  $(".post").hide();
+  $(".post.game").show();
+
   $(".filter-item").click(function () {
     const value = $(this).attr("data-filter");
-    if (value == "all") {
-      $(".post").show("1000");
+
+    // Always hide all posts first
+    $(".post").hide("1000");
+
+    // If 'all' is clicked, treat it as 'logo' only
+    if (value === "all") {
+      $(".post.logo").show("1000");
     } else {
-      $(".post")
-        .not("." + value)
-        .hide("1000");
-      $(".post")
-        .filter("." + value)
-        .show("1000");
+      $(".post." + value).show("1000");
     }
   });
 });
+
 
 
 // javascript for sticky navbar even if u scroll the navbar will be fixed
